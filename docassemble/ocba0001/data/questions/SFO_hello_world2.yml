@@ -1,0 +1,14 @@
+---
+# My first Docassemble program
+# Exercise 1a
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello **${ MJFName }**
+  
+  Welcome to Docassble!
+---
+question: Name
+fields:
+  - What is your name?: MJFName
+---

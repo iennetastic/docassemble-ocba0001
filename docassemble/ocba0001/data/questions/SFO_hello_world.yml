@@ -1,0 +1,10 @@
+---
+# My first Docassemble program
+# Exercise 1a
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello Sherica,
+  
+  Welcome to Docassble!
+---
