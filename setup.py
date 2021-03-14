@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.ocba0001',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='# docassemble.ocba0001\n\nA docassemble extension.\n\n## Author\n\nSherica Fabienne Ocbania, ocba0001@flinders.edu.au\n\n',
+      long_description='# docassemble.ocba0001\r\n\r\nA docassemble extension.\r\n\r\n## Author\r\n\r\nSherica Fabienne Ocbania, ocba0001@flinders.edu.au\r\n\r\n',
       long_description_content_type='text/markdown',
       author='Sherica Fabienne Ocbania',
       author_email='ocba0001@flinders.edu.au',
