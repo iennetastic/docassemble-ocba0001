@@ -61,9 +61,19 @@ subquestion: |
   Name of First Respondent | ${firstRespondent}
   State | ${ State } 
   Date   | ${ date }
+  Division | ${ Division}
+  Signed by | ${ Signatory}
+  Lawyer of the Applicant | ${ Capacity}
   
 attachment:
   docx template file: Form_1-Template.docx
+  name: Form 1 Document
+  valid formats:
+      - pdf
+
+buttons:
+  - Exit: exit
+    url: https://www.fedcourt.gov.au/
 ---
 mandatory: true
 question: | 
@@ -88,6 +98,9 @@ fields:
       - General: General
   - Date: date
     datatype: date
-  - Signatory: Signatory
-  - Capacity: Capacity 
+  - Signed by: Signatory
+  - Capacity of the signatory: Capacity
+    choices:
+      - Applicant
+      - Lawyer of the Applicant
 ---
