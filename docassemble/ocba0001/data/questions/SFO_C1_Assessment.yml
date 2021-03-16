@@ -103,4 +103,14 @@ fields:
     choices:
       - Applicant
       - Lawyer of the Applicant
+  - Lawyer: Lawyer
+  - Law Firm: lawfirm 
+    required: False
+  - Tel No: tel
+    datatype: integer
+  - Email: email
+    datatype: email
+  - Fax: fax
+    datatype: integer
+  - Address: address
 ---
