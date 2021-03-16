@@ -1,5 +1,7 @@
 ---
 # My first Docassemble Assessment! - C1
+# Sherica Fabienne Ocbania - ocba0001
+
 mandatory: True
 
 question: Federal Court Form 1
@@ -46,9 +48,20 @@ buttons:
   - Exit: exit
     url: http://www.courts.sa.gov.au/
 ---
+mandatory: true
 event: court_continue
 question: |
-  App coming
+  Download your completed Form 1...
+subquestion: |  
+  **Please review the information you've submitted below:**
+  
+  Label  | Answers
+  -------|---------
+  Name of First Applicant  | ${firstApplicant}
+  Name of First Respondent | ${firstRespondent}
+  State | ${ State } 
+  Date   | ${ date }
+  
 attachment:
   docx template file: Form_1-Template.docx
 ---
@@ -59,9 +72,22 @@ fields:
   - Applicant: firstApplicant
   - Respondent: firstRespondent
   - State: State
+    choices:
+      - Australian Capital Territory: ACT
+      - New South Wales: New South Wales
+      - Northern Territory: Northern Territory
+      - Queensland: Queensland
+      - South Australia: South Australia
+      - Tasmania: Tasmania
+      - Victoria: Victoria
   - Division: Division
+    choices:
+      - Corporations: Corporations
+      - Criminal: Criminal
+      - Employment: Employment
+      - General: General
   - Date: date
+    datatype: date
   - Signatory: Signatory
   - Capacity: Capacity 
-  
 ---
