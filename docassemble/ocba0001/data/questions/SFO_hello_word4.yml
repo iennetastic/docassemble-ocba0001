@@ -1,0 +1,32 @@
+---
+# My first Docassemble program - Push Change
+# Exercise 1d
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello ${ SCOSalutation + ' ' + SCOlastName },
+  
+  **Your information**
+  
+  Column 1|Column 2
+  -------|-------
+  Name|${ SCOSalutation + ' ' + SCOfirstName + ' ' + SCOlastName }
+  Age|${ SCOAge }
+  
+buttons:
+  - I'm done: exit
+    url: https://www.flinders.edu.au/college-business-government-law
+  - Do it again: restart
+---
+question: Name
+fields:
+  - Salutation: SCOSalutation
+    choices:
+      - Dr
+      - Mr
+      - Mrs
+      - Ms
+  - First Name: SCOfirstName
+  - Last Name: SCOlastName
+  - Age: SCOAge
+---

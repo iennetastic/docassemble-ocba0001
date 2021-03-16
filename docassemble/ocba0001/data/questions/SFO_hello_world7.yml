@@ -1,0 +1,35 @@
+---
+# Adding Partner etc
+# Exercise 1g
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello **${ SCOName }**, ${ SCOAgeState } and
+  % if SCOIncome == 0:
+   you do not earn an income
+  % else:
+   your annual income is ${ SCOIncome }
+  % endif
+buttons:
+  - Exit: exit
+  - Restart: restart
+---
+code: |
+  if ( (SCOAge < 18)):
+    SCOAgeState = "You are just a child"
+  elif ( (SCOAge >= 18) and
+         (SCOAge <50)):
+    SCOAgeState = "You are just an adult"
+  else :
+    SCOAgeState = "You are an adult and are eligible for the age pension"
+---
+question: Your Information
+fields:
+  - Name: SCOName
+  - Age: SCOAge
+    datatype: integer
+  - Annual Income: SCOIncome
+    help: Annual income is the total income that you earn over one year.
+    datatype: currency
+    min: 0
+---

@@ -1,0 +1,67 @@
+---
+# My first Docassemble Assessment! - C1
+mandatory: True
+
+question: Federal Court Form 1
+subquestion: |
+  ### Welcome to Docassemble!
+  This is an app that completes a Federal Court Form 1 Document!
+  
+  
+  **Disclaimer:** The Form must be checked by a lawyer and this app does not give legal advices. 
+  
+buttons:
+  - Continue: continue
+  - Exit: exit
+    url: http://www.courts.sa.gov.au/
+---
+mandatory: true
+
+question: |
+  Which court will this file be completed for?
+field: court_form
+dropdown:
+  - Supreme Court 
+  - District Court
+  - Magistrates Court 
+  - Federal Court 
+  - Federal Circuit Court
+---
+mandatory: true
+code: |
+  if court_form == 'Supreme Court':
+    court_exit
+  elif court_form == 'District Court':
+    court_exit
+  elif court_form == 'Magistrates Court':
+    court_exit
+  elif court_form == 'Federal Court':
+    court_continue
+---
+event: court_exit
+question: |
+  Sorry, this app will only prepare forms for FCA and FCCT
+  
+buttons:
+  - Exit: exit
+    url: http://www.courts.sa.gov.au/
+---
+event: court_continue
+question: |
+  App coming
+attachment:
+  docx template file: Form_1-Template.docx
+---
+mandatory: true
+question: | 
+  Please fill out the following information
+fields:
+  - Applicant: firstApplicant
+  - Respondent: firstRespondent
+  - State: State
+  - Division: Division
+  - Date: date
+  - Signatory: Signatory
+  - Capacity: Capacity 
+  
+---

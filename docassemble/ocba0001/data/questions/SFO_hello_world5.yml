@@ -1,0 +1,26 @@
+---
+# Using If Statements - C2.01
+# Exercise 1e
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello **${ SCOName }**, ${ SCOAgeState }
+buttons:
+  - Exit: exit
+  - Restart: restart
+---
+code: |
+  if ( (SCOAge < 18)):
+    SCOAgeState = "You are just a child"
+  elif ( (SCOAge >= 18) and
+         (SCOAge <50)):
+    SCOAgeState = "You are just an adult"
+  else :
+    SCOAgeState = "You are an adult and are eligible for the age pension"
+---
+question: Your Information
+fields:
+  - Name: SCOName
+  - Age: SCOAge
+    datatype: integer
+---
