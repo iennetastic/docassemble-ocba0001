@@ -64,6 +64,12 @@ subquestion: |
   Division | ${ Division}
   Signed by | ${ Signatory}
   Lawyer of the Applicant | ${ Capacity}
+  Lawyer Name | ${ Lawyer}
+  Law Firm | ${ lawfirm}
+  Telephone Number | ${ tel}
+  Email | ${ email}
+  Fax | ${ fax}
+  Address | ${ address}
   
 attachment:
   docx template file: Form_1-Template.docx
@@ -103,6 +109,11 @@ fields:
     choices:
       - Applicant
       - Lawyer of the Applicant
+---
+mandatory: true
+question: | 
+  Please fill out the following for your lawyer information
+fields:
   - Lawyer: Lawyer
   - Law Firm: lawfirm 
     required: False
@@ -113,4 +124,3 @@ fields:
   - Fax: fax
     datatype: integer
   - Address: address
----
